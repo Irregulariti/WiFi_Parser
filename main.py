@@ -27,8 +27,13 @@ for line in text:
 print(listNames)
 print(listDictsOfLevels)
 
-
 # toKotlin :-)
-list = str(listNames).replace("\'", "\"")[1:]
-list = list[:-1]
-print(list)
+listNames = str(listNames).replace("\'", "\"")[1:]
+listNames = listNames[:-1]
+listDictsOfLevels = str(listDictsOfLevels).replace("\'", "\"")[1:]
+listDictsOfLevels = listDictsOfLevels[:-1]
+listDictsOfLevels = listDictsOfLevels.replace("{", "mapOf(")
+listDictsOfLevels = listDictsOfLevels.replace("}", ")")
+listDictsOfLevels = listDictsOfLevels.replace(": ", " to ")
+print("val list = listOf(" + listNames + ")")
+print("val list = listOf(" + listDictsOfLevels + ")")
