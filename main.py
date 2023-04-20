@@ -35,5 +35,5 @@ listDictsOfLevels = listDictsOfLevels[:-1]
 listDictsOfLevels = listDictsOfLevels.replace("{", "mapOf(")
 listDictsOfLevels = listDictsOfLevels.replace("}", ")")
 listDictsOfLevels = listDictsOfLevels.replace(": ", " to ")
-print("val list = listOf(" + listNames + ")")
-print("val list = listOf(" + listDictsOfLevels + ")")
+print("val names = listOf(" + listNames + ")")
+print("val levels = listOf(" + listDictsOfLevels + ")")
